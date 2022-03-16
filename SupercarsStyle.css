@@ -1,0 +1,413 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hero-section-title {
+    font-size: 10em;
+    color: cadetblue;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    
+}
+
+
+
+
+@keyframes titleAnim {
+    from {transform: translateY(0%); filter:  opacity(0) drop-shadow(4px 20px 15px #000000aa);}
+    to {transform: translateY(-50%); filter:  opacity(1) drop-shadow(4px 20px 15px #000000aa);}
+}
+
+@keyframes titleAnim2 {
+    from {transform: translateY(0%); filter: opacity(0);}
+    to {transform: translateY(-300%); filter: opacity(1);}
+}
+
+
+
+.carousel-title {
+    font-size: 13vw;
+    font-weight: bold;
+    color: #92B2C9;
+    line-height: 0.8em;
+    filter: drop-shadow(4px 20px 15px #000000aa);
+    animation: titleAnim 1s ease 1 forwards;
+}
+
+.carousel-text {
+    color: #E3E3E3;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1em;
+    animation: titleAnim2 1.5s ease 1 forwards;
+}
+
+.custom-shape-divider-bottom-1641199461-1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1641199461-1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1641199461-1 .shape-fill {
+    fill: #19191B;
+}
+
+.custom-shape-divider-bottom-1641199461-2 .shape-fill {
+    fill: #232326;
+}
+
+.custom-shape-divider-bottom-1641199461-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1641199461-2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1641199461-3 .shape-fill {
+    fill: #1F1F21;
+}
+
+.custom-shape-divider-bottom-1641199461-3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1641199461-3 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+    transform: rotateY(180deg);
+}
+
+.my-card-title::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    background: #19191B;
+    width: 100%;
+    left: 0;
+    bottom: 0; 
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all .7s ease;
+}
+
+
+
+
+.my-card-title-container {
+    position: relative;
+    width: 65%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: .02em;
+}
+
+.my-card {
+    cursor: pointer;
+    display: block;
+    transition: all .7s ease;
+    
+}
+
+.my-card:hover .my-card-title::after{
+    transform: scaleX(1);
+}
+
+.my-card:hover {
+    transform: scale(1.03);
+}
+
+.my-card-title-container-2 {
+    width: 90%;
+}
+
+.bugatti-btn:hover {
+    filter: brightness(120%);
+    box-shadow: 0px 0px 5px 5px #2090D755;
+}
+
+.bugatti-btn {
+    letter-spacing: 3px;
+}
+
+#Bugatti {
+    position: relative;
+    overflow: hidden;
+}
+
+#Bugatti::before {
+    color: #bbbbbb22;
+    content: "Bugatti Bolide";
+    display: block;
+    font-size: 2000%;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+}
+
+
+.lambo-btn:hover {
+    filter: brightness(120%);
+    box-shadow: 0px 0px 5px 5px #8B8B5955;
+}
+
+.lambo-btn {
+    letter-spacing: 3px;
+}
+
+#lambo {
+    position: relative;
+    overflow: hidden;
+}
+
+#lambo::before {
+    color: #bbbbbb22;
+    content: "Lamborghini vision GT";
+    display: block;
+    font-size: 2000%;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+}
+
+.McL-btn:hover {
+    filter: brightness(120%);
+    box-shadow: 0px 0px 5px 5px #DD7C6C55;
+}
+
+.McL-btn {
+    letter-spacing: 3px;
+}
+
+#McL {
+    position: relative;
+    overflow: hidden;
+}
+
+#McL::before {
+    color: #bbbbbb22;
+    content: "McLaren 765LT";
+    display: block;
+    font-size: 2000%;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+}
+
+
+
+
+
+.tilt-box-wrap {
+    grid-row: 1/4;
+    grid-column: 1/4;
+    
+    position: relative;
+    transition: all .6s ease-out;
+    perspective: 1000px;
+}
+
+.tilt-box-wrap:hover {
+    transition: all .3s linear;
+    
+
+}
+.tilt-box{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .6s ease-out;
+    transform: rotateX(0deg) rotateY(0deg);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+}
+
+.t_over {
+    width: 33.3333%;
+    height: 33.3333%;
+    position: absolute;
+    z-index: 1;
+}
+
+.t_over:nth-child(1) {left: 0; top: 0;}
+.t_over:nth-child(2) {left: 33.3333%; top: 0;}
+.t_over:nth-child(3) {left: 66.6666%; top: 0;}
+.t_over:nth-child(4) {left: 0; top: 33.3333%;}
+.t_over:nth-child(5) {left: 33.3333%; top: 33.3333%;}
+.t_over:nth-child(6) {left: 66.6666%; top: 33.3333%;}
+.t_over:nth-child(7) {left: 0; top: 66.6666%;}
+.t_over:nth-child(8) {left: 33.3333%; top: 66.6666%;}
+.t_over:nth-child(9) {left: 66.6666%; top: 66.6666%;}
+
+.t_over:nth-child(1):hover ~ .tilt-box{ transform: rotateX(-15deg) rotateY(15deg);}
+.t_over:nth-child(2):hover ~ .tilt-box{ transform: rotateX(-15deg) rotateY(0deg);}
+.t_over:nth-child(3):hover ~ .tilt-box{ transform: rotateX(-15deg) rotateY(-15deg);}
+.t_over:nth-child(4):hover ~ .tilt-box{ transform: rotateX(0deg) rotateY(15deg);}
+.t_over:nth-child(5):hover ~ .tilt-box{ transform: rotateX(0deg) rotateY(0deg);}
+.t_over:nth-child(6):hover ~ .tilt-box{ transform: rotateX(0deg) rotateY(-15deg);}
+.t_over:nth-child(7):hover ~ .tilt-box{ transform: rotateX(15deg) rotateY(15deg);}
+.t_over:nth-child(8):hover ~ .tilt-box{ transform: rotateX(15deg) rotateY(0deg);}
+.t_over:nth-child(9):hover ~ .tilt-box{ transform: rotateX(15deg) rotateY(-15deg);}
+
+
+
+.quote-glow {
+    font-size: 20vh;
+    
+}
+
+.quote {
+    color: white;
+    white-space: nowrap;
+    text-align: left;
+    display: inline-block;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 993px) {
+    .my-card-title {
+        font-size: 1rem !important;
+    }
+
+    .my-card:hover .my-card-title::after{
+        transform: scaleX(1);
+    }
+
+    .my-card-title-container {
+        width: 60%;
+    }
+
+    .my-card-title-container-2 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .my-card-title {
+        font-size: 1rem !important;
+    }
+
+    .my-card:hover .my-card-title::after{
+        transform: scaleX(1);
+    }
+
+    .my-card-title-container {
+        width: 30%;
+    }
+
+    .my-card-title-container-2 {
+        width: 40%;
+    }
+
+    .quote-glow {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-shadow:
+            0 0 7px white,
+            0 0 10px white,
+            0 0 21px white,
+            0 0 42px blue,
+            0 0 82px blue,
+            0 0 92px blue,
+            0 0 102px blue,
+            0 0 151px blue;
+    }
+
+    .quote {
+        text-align: center;
+    }
+}
+
+@media screen not (any-hover) {
+    .my-card-title::after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        background: #19191B;
+        width: 100%;
+        left: 0;
+        bottom: 0; 
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: all .7s ease;
+    }
+
+    .quote {
+        text-align: center;
+    }
+
+    .quote-glow {
+        color: white;
+        font-size: 200%;
+        font-weight: bold;
+        
+        text-shadow:
+            0 0 7px white,
+            0 0 10px white,
+            0 0 21px white,
+            0 0 42px blue,
+            0 0 82px blue,
+            0 0 92px blue,
+            0 0 102px blue,
+            0 0 151px blue;
+    }
+}
