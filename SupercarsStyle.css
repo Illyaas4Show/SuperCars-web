@@ -309,7 +309,7 @@ body {
 
 
 .quote-glow {
-    font-size: 20vh;
+    font-size: 30vh;
     
 }
 
@@ -318,7 +318,8 @@ body {
     white-space: nowrap;
     text-align: left;
     display: inline-block;
-    transform: translateY(-50%);
+    
+    
 }
 
 @media screen and (max-width: 993px) {

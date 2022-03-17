@@ -1,7 +1,6 @@
-var blocks = document.getElementsByClassName('quote-glow');
-var container = document.getElementsByClassName('quote');
-var hs = new HorizontalScroll.default({
-	blocks : blocks,
-	container: container,
-    isAnimated: true,
+const scrollContainer = document.querySelector("quote");
+
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
 });
