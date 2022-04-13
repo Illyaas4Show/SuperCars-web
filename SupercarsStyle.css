@@ -313,53 +313,67 @@ body {
 
 }
 
-.quote {
-    color: white;
-    white-space: nowrap;
-    text-align: left;
-    display: inline-block;
+.quote .scroll div:nth-child(2) {
+  display: none;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+  .quote .scroll div:nth-child(2) {
+    display: block;
+  }
+
+  .quote {
+      color: white;
+      white-space: nowrap;
+      text-align: left;
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+  }
+  .quote .scroll {
     width: 100%;
-    overflow: hidden;
-}
-
-.quote .scroll {
-  width: 100%;
-  display: flex;
-}
-
-.quote .scroll div {
-  background-color: blue;
-  white-space: nowrap;
-  animation: scroll 10s linear infinite;
-  animation-delay: -10s;
-}
-
-.quote .scroll div:nth-shild(2) {
-  animation: scroll2 10s linear infinite;
-  animation-delay: -5s;
-}
-
-@Keyframes scroll {
-  0% {
-    transform: translateX(100%);
+    display: flex;
   }
 
-  100% {
-    transform: translateX(-100%)
+  .quote .scroll div {
+    background-color: blue;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+    animation-delay: -10s;
   }
+
+  .quote .scroll div:nth-child(2) {
+    animation: scroll2 10s linear infinite;
+    animation-delay: -5s;
+  }
+
+  @Keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+  @Keyframes scroll2 {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-200%)
+    }
+  }
+
 }
-
-
-@Keyframes scroll2 {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-200%)
-  }
-}
-
 
 @media screen and (max-width: 993px) {
     .my-card-title {
@@ -450,4 +464,5 @@ body {
             0 0 102px blue,
             0 0 151px blue;
     }
+
 }
