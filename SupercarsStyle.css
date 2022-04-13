@@ -20,7 +20,7 @@ body {
     position: absolute;
     top: 55%;
     transform: translateY(-50%);
-    
+
 }
 
 
@@ -128,7 +128,7 @@ body {
     background: #19191B;
     width: 100%;
     left: 0;
-    bottom: 0; 
+    bottom: 0;
     transform: scaleX(0);
     transform-origin: left;
     transition: all .7s ease;
@@ -149,7 +149,7 @@ body {
     cursor: pointer;
     display: block;
     transition: all .7s ease;
-    
+
 }
 
 .my-card:hover .my-card-title::after{
@@ -256,7 +256,7 @@ body {
 .tilt-box-wrap {
     grid-row: 1/4;
     grid-column: 1/4;
-    
+
     position: relative;
     transition: all .6s ease-out;
     perspective: 1000px;
@@ -264,7 +264,7 @@ body {
 
 .tilt-box-wrap:hover {
     transition: all .3s linear;
-    
+
 
 }
 .tilt-box{
@@ -310,7 +310,7 @@ body {
 
 .quote-glow {
     font-size: 30vh;
-    
+
 }
 
 .quote {
@@ -318,9 +318,48 @@ body {
     white-space: nowrap;
     text-align: left;
     display: inline-block;
-    
-    
+    width: 100%;
+    overflow: hidden;
 }
+
+.quote .scroll {
+  width: 100%;
+  display: flex;
+}
+
+.quote .scroll div {
+  background-color: blue;
+  white-space: nowrap;
+  animation: scroll 10s linear infinite;
+  animation-delay: -10s;
+}
+
+.quote .scroll div:nth-shild(2) {
+  animation: scroll2 10s linear infinite;
+  animation-delay: -5s;
+}
+
+@Keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%)
+  }
+}
+
+
+@Keyframes scroll2 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-200%)
+  }
+}
+
 
 @media screen and (max-width: 993px) {
     .my-card-title {
@@ -341,7 +380,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    
+
     .my-card-title {
         font-size: 1rem !important;
     }
@@ -386,7 +425,7 @@ body {
         background: #19191B;
         width: 100%;
         left: 0;
-        bottom: 0; 
+        bottom: 0;
         transform: scaleX(1);
         transform-origin: left;
         transition: all .7s ease;
@@ -400,7 +439,7 @@ body {
         color: white;
         font-size: 200%;
         font-weight: bold;
-        
+
         text-shadow:
             0 0 7px white,
             0 0 10px white,
