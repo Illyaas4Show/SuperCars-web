@@ -40,7 +40,9 @@ body {
     to {transform: translateY(-300%); filter: opacity(1);}
 }
 
-
+.navbar {
+  box-shadow: 0 0px 20px #111;
+}
 
 .carousel-title {
     font-size: 13vw;
@@ -118,6 +120,29 @@ body {
 }
 
 .custom-shape-divider-bottom-1641199461-3 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+    transform: rotateY(180deg);
+}
+
+
+.custom-shape-divider-bottom-1641199461-4 .shape-fill {
+    fill: #808080;
+}
+
+.custom-shape-divider-bottom-1641199461-4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1641199461-4 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
