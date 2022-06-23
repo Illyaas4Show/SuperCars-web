@@ -424,6 +424,29 @@ body {
 
 }
 
+hr.light {
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+  }
+
+hr {
+    margin: auto;
+}
+
+.footerLinks {
+    color: white;
+    background-color: none;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.footerLinks:hover {
+    color: red!important;
+}
+
 @media screen and (max-width: 993px) {
     .my-card-title {
         font-size: 1rem !important;
