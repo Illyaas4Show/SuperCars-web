@@ -441,10 +441,11 @@ hr {
     display: block;
     margin-top: 1em;
     margin-bottom: 1em;
+    transition: all 1 ease;
 }
 
 .footerLinks:hover {
-    color: red!important;
+    color: #bbb;
 }
 
 @media screen and (max-width: 993px) {
