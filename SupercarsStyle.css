@@ -341,6 +341,34 @@ body {
   display: none;
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.from-bottom.bugatti {
+    transform: translateY(30%);
+    opacity: 0;
+}
+
+.from-bottom.lambo {
+    transform: translateY(35%);
+    opacity: 0;
+}
+
+.from-bottom.Mcl {
+    transform: translateY(40%);
+    opacity: 0;
+}
+
+.from-bottom.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
 
 
 
