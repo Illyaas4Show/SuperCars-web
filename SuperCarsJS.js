@@ -3,6 +3,29 @@ const scrolling = document.querySelector('.scrolling');
 const scrolling2 = document.querySelector('.scrolling2');
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.from-bottom');
+const navLinks = document.querySelectorAll('.nav-link');
+const home = document.getElementById('Home');
+const about = document.querySelector('#About');
+const bugatti = document.getElementById('Bugatti');
+const lambo = document.getElementById('lambo');
+const mcl = document.getElementById('McL');
+const support = document.getElementById('support');
+const aboutLink = document.querySelector('.about');
+const sec = document.querySelector('.section');
+
+const homeObserverOptions = {};
+
+const homeObserver = new IntersectionObserver(function(entries, homeObserverOptions) {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) {
+      aboutLink.classList.add("active");
+    } else {
+      aboutLink.classList.remove("active");
+    }
+  });
+}, homeObserverOptions);
+
+homeObserver.observe(sec);
 
 // This sets the range that is needed for observing.
 // Threshold being 1 makes it only work when the full element is in the viewport
@@ -53,4 +76,11 @@ faders.forEach(fader => {
 
 sliders.forEach(slider => {
   appearOnScroll.observe(slider);
-})
+});
+
+// To add active state when nav bar links clicked
+$(".nav-link").on("click", function(){
+	$(".nav-link.active").removeClass("active");
+	$(this).addClass("active");
+});
+
