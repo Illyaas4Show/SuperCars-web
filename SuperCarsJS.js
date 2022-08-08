@@ -18,6 +18,7 @@ const mclLink = document.querySelector('.mcl');
 const supportLink = document.querySelector('.support');
 const sec1 = document.querySelector('.section1');
 const sec2 = document.querySelector('.section2');
+const sec2 = document.querySelector('.section2');
 
 
 // Update Navbar ----------------------------------------------------------------------
