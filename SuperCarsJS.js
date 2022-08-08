@@ -10,22 +10,49 @@ const bugatti = document.getElementById('Bugatti');
 const lambo = document.getElementById('lambo');
 const mcl = document.getElementById('McL');
 const support = document.getElementById('support');
+const homeLink = document.querySelector('.home');
 const aboutLink = document.querySelector('.about');
-const sec = document.querySelector('.section');
+const bugattiLink = document.querySelector('.bugatti');
+const lamboLink = document.querySelector('.lambo');
+const mclLink = document.querySelector('.mcl');
+const supportLink = document.querySelector('.support');
+const sec1 = document.querySelector('.section1');
+const sec2 = document.querySelector('.section2');
 
-const homeObserverOptions = {};
 
+// Update Navbar ----------------------------------------------------------------------
+
+// Main rootMargin
+const homeObserverOptions = {
+  rootMargin: "-50% 0px 0px 0px",
+  threshold: .25
+};
+
+// Home section
 const homeObserver = new IntersectionObserver(function(entries, homeObserverOptions) {
   entries.forEach(entry => {
     if(!entry.isIntersecting) {
-      aboutLink.classList.add("active");
+      homeLink.classList.remove("active");
     } else {
-      aboutLink.classList.remove("active");
+      homeLink.classList.add("active");
     }
   });
 }, homeObserverOptions);
 
-homeObserver.observe(sec);
+// About section
+const aboutObserver = new IntersectionObserver(function(entries, homeObserverOptions) {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) {
+      aboutLink.classList.remove("active");
+    } else {
+      aboutLink.classList.add("active");
+    }
+  });
+}, homeObserverOptions);
+
+homeObserver.observe(sec1);
+aboutObserver.observe(sec2);
+// ------------------------------------------------------------------------------------
 
 // This sets the range that is needed for observing.
 // Threshold being 1 makes it only work when the full element is in the viewport
