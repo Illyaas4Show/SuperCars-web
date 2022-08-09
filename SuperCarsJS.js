@@ -15,18 +15,53 @@ const aboutLink = document.querySelector('.about');
 const bugattiLink = document.querySelector('.bugatti');
 const lamboLink = document.querySelector('.lambo');
 const mclLink = document.querySelector('.mcl');
+const quoteLink = document.querySelector('.quote2');
 const supportLink = document.querySelector('.support');
 const sec1 = document.querySelector('.section1');
 const sec2 = document.querySelector('.section2');
-const sec2 = document.querySelector('.section2');
+const sec3 = document.querySelector('.section3');
+const sec4 = document.querySelector('.section4');
+const sec5 = document.querySelector('.section5');
+const sec6 = document.querySelector('.section6');
+const sec7 = document.querySelector('.section7');
 
 
 // Update Navbar ----------------------------------------------------------------------
 
-// Main rootMargin
+// ObserverOptions
 const homeObserverOptions = {
   rootMargin: "-50% 0px 0px 0px",
   threshold: .25
+};
+
+const aboutObserverOptions = {
+  rootMargin: "-50% 0px 0px 0px",
+  threshold: .25
+};
+
+const bugattiObserverOptions = {
+  rootMargin: "-50% 0px 0px 0px",
+  threshold: .1
+};
+
+const lamboObserverOptions = {
+  rootMargin: "-50% 0px 0px 0px",
+  threshold: .25
+};
+
+const mclObserverOptions = {
+  rootMargin: "-50% 0px 0px 0px",
+  threshold: .2
+};
+
+const quoteObserverOptions = {
+  rootMargin: "-50% 0px 0px 0px",
+  threshold: .2
+};
+
+const supportObserverOptions = {
+  rootMargin: "-30% 0px 0px 0px",
+  threshold: .3
 };
 
 // Home section
@@ -49,10 +84,70 @@ const aboutObserver = new IntersectionObserver(function(entries, homeObserverOpt
       aboutLink.classList.add("active");
     }
   });
-}, homeObserverOptions);
+}, aboutObserverOptions);
+
+// Bugatti section
+const bugattiObserver = new IntersectionObserver(function(entries, homeObserverOptions) {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) {
+      bugattiLink.classList.remove("active");
+    } else {
+      bugattiLink.classList.add("active");
+    }
+  });
+}, bugattiObserverOptions);
+
+// Lambo section
+const lamboObserver = new IntersectionObserver(function(entries, homeObserverOptions) {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) {
+      lamboLink.classList.remove("active");
+    } else {
+      lamboLink.classList.add("active");
+    }
+  });
+}, lamboObserverOptions);
+
+// McL section
+const mclObserver = new IntersectionObserver(function(entries, homeObserverOptions) {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) {
+      mclLink.classList.remove("active");
+    } else {
+      mclLink.classList.add("active");
+    }
+  });
+}, mclObserverOptions);
+
+// Quote section
+const quoteObserver = new IntersectionObserver(function(entries, homeObserverOptions) {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) {
+      quoteLink.classList.remove("active");
+    } else {
+      quoteLink.classList.add("active");
+    }
+  });
+}, quoteObserverOptions);
+
+// Home section
+const supportObserver = new IntersectionObserver(function(entries, homeObserverOptions) {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) {
+      supportLink.classList.remove("active");
+    } else {
+      supportLink.classList.add("active");
+    }
+  });
+}, supportObserverOptions);
 
 homeObserver.observe(sec1);
 aboutObserver.observe(sec2);
+bugattiObserver.observe(sec3);
+lamboObserver.observe(sec4);
+mclObserver.observe(sec5);
+quoteObserver.observe(sec6);
+supportObserver.observe(sec7);
 // ------------------------------------------------------------------------------------
 
 // This sets the range that is needed for observing.
